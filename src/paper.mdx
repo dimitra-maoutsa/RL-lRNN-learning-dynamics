@@ -91,10 +91,14 @@ We study how recurrence shapes sparse-reward learning in linear recurrent networ
 <Picture src={summaryPng} alt="Contribution overview" />
 
 
-<b>TL;DR</b>
+### TL;DR
 > We provide a theory for reward-driven learning in linear recurrent neural networks within a teacher-student setting.
 
-How does recurrent connectivity shape learning from rewards that require an entire sequence of correct actions?
+**How does recurrent connectivity shape learning from rewards that require an entire sequence of correct actions?**
+
+We study this question in linear recurrent networks trained with a **linearised REINFORCE rule** in a **teacher–student setting**. 
+The student receives a reward only when its decisions agree with the teacher's decisions at every time step within an episode. 
+The very presence of recurrent connections introduces temporal dependences between decisions, thereby changing the probability of success.
 
 
 
