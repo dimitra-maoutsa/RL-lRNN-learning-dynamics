@@ -124,6 +124,11 @@ Thus to secure a successful episode the joint output trajectory of the teacher-s
 
 ## A killed transfer operator
 
+Since success requires the joint teacher-student trajectory to remain within the agreement region, we can compute the success probability 
+by emplying a Feynman-Kac style operator for discrete time process that kills trajectories that hit the bounderies of the agreement regions at decision time steps.
+This amounts to introducing a so called **killed Transfer operator** whose eigenspectrum reveals and in particular its dominant eigenvalue, reveals the long-time behaviour
+of trajectories described by this killed process. 
+
 
 ## Learning updates concentrate in few collective directions
 
