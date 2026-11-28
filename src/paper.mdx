@@ -108,17 +108,17 @@ Here,
 decrease reward availability. 
 - We find that the instantaneous weight updates are dominated by a few shared collective directions.
 - Our theory seperates reward availability from the expected updates conditioned on success. 
-- We further show how different connectivity realisations result in different learning trajectories albeit starting from same performance.
+- We further show how different connectivity realisations result in different learning trajectories albeit starting from same initial performance.
 
 ## Teacher-student reward-driven learning
 
-We view the in recurrent neural networks in a teacher-student setting in terms of the **persitence probability of a correlated Gaussian process** (that oif the joint output pre-activations. Rewarded episodes result from the continual agreement between the two networks, i.e. from trials where the joint output Gaussian process remains within the
+We view the in recurrent neural networks in a teacher-student setting in terms of the **persitence probability of a correlated Gaussian process** (that of the joint output pre-activations). Rewarded episodes result from the continual agreement between teacher and student, i.e. from trials where the joint output Gaussian process remains within the
 agreement orthants ((+,+) or (-,-)). 
 
 ## Reward requires agreement throughout the episode
 
 Both teacher and student see the same inputs at every time step, but process them throgh different connectivity to generate decisions. Instead of considering the
-hard-sign binary decisions of each network, we focus at the output pre-activations, $\lambda_t$ and $\nu_t$, i.e. the values before the sign operation of the outputs.
+hard-sign binary decisions of each network, we focus at the output pre-activations, $\lambda_t$ and $\nu_t$, i.e. the values before the sign operation of the network readout.
 For the two networks to agree, the pre-activations are sufficient to have the same sign, i.e. to fall within the first or third quadrant in the $\lambda_t - \nu_t$ space.
 Thus to secure a successful episode the joint output trajectory of the teacher-student pair has to remain within this agreement region, and change decision signs in tandem.
 
@@ -133,6 +133,8 @@ of trajectories described by this killed process.
 
 
 ## Learning updates concentrate in few collective directions
+
+The presence of the single readout enforces a shared subspace structure to the learning fileds of the input weights $W_x$ and recurrent weights $W_h$.
 
 
 ## The same behavioural output at initialisation can lead to different learning trajectories 
