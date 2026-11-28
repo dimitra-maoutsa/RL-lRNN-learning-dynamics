@@ -98,15 +98,17 @@ We study how recurrence shapes sparse-reward learning in linear recurrent networ
 
 We study this question in linear recurrent networks trained with a **linearised REINFORCE rule** in a **teacher–student setting**. 
 The student receives a reward only when its decisions agree with the teacher's decisions at every time step within an episode. 
-The very presence of recurrent connections introduces temporal dependences between decisions, thereby changing the probability of success.
+The very presence of recurrent connections introduces temporal dependences between decisions, thereby changing the probability of success of a learning episode.
 
 [ - put schematic from video - ]
 
-Here, we connect the probability of a successful episode to the alignment of the **(impulse) response vectors** of the two networks.
-We show that the relative alignment of the initial response vectors determined by the initial weight configuration can either increase or
-decrease reward availability. We find that the instantaneous weight updates are dominated by a few shared collective directions.
-Our theory seperates reward availability from the expected updates conditioned on success. We show how different connectivity realisations
-result in different learning trajectories albeit starting from same performance.
+Here, 
+- we connect the probability of a successful episode to the alignment of the **(impulse) response vectors** of the two networks.
+- We show that the relative alignment of the initial response vectors determined by the initial weight configuration can either increase or
+decrease reward availability. 
+- We find that the instantaneous weight updates are dominated by a few shared collective directions.
+- Our theory seperates reward availability from the expected updates conditioned on success. 
+- We further show how different connectivity realisations result in different learning trajectories albeit starting from same performance.
 
 ## Teacher-student reward-driven learning
 
