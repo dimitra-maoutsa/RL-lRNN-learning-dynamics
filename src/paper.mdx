@@ -140,6 +140,9 @@ spanning the iterative application of the recurrent connectivity matrix to the r
  $$\mathcal{K}_T(W_h,\mathbf{c}) =\text{span}\{\mathbf{c},W_h^\top\mathbf{c},\ldots,(W_h^\top)^{T-1}\mathbf{c}\}.$$ Thus the column-space of the learning field lies within $\mathcal{K}_T$,
 $\text{col}[F_x\, F_h] \subseteq \mathcal{K}_T(W_h,\mathbf{c})$, whose dimensionality is limited by the duration of the episode and size of recurrent network,
 $$\dim\mathcal{K}_T\leq\min(T,N_h)$$.
+
+This motivates a reduced representation of the learning dynamics in what we call the **projected shared-subspace model** which is inspired by the diagonal structure of spectrally
+aligned networks learning with gradient minimising objectives introduced mainly by Saxe et al. and the low-rank networks describing collective interactions within the network introduced by Mastrogiuseppe et al.
  
 ## The same behavioural output at initialisation can lead to different learning trajectories 
 
