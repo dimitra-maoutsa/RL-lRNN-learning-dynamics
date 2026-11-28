@@ -135,7 +135,17 @@ of trajectories described by this killed process.
 ## Learning updates concentrate in few collective directions
 
 The presence of the single readout enforces a shared subspace structure to the learning fileds of the input weights $W_x$ and recurrent weights $W_h$.
+We find that the instantaneous learning updates have a shared sub-space structure, where the left factor of the instantaneous update is confined within a Krylov like subspace
+spanning the iterative application of the recurrent connectivity matrix to the readout 
+ $$\mathcal K_T(W_h,\mathbf c) =\text{span}\{\mathbf c,W_h^\top\mathbf c,\ldots,
+ (W_h^\top)^{T-1}\mathbf c\}.$$
+ 
 
+$$ \text{col}[F_x\ F_h]\subseteq\mathcal K_T(W_h,\mathbf c)$$
+ 
+
+$$\dim\mathcal K_T\leq\min(T,N_h)$$
+ 
 
 ## The same behavioural output at initialisation can lead to different learning trajectories 
 
